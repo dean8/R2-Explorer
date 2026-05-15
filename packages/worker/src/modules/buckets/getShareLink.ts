@@ -140,11 +140,11 @@ export class GetShareLink extends OpenAPIRoute {
 		headers.set("etag", file.httpEtag);
 
 		// Add content disposition for download
-		const fileName = shareMetadata.key.split("/").pop() || "download";
-		headers.set(
-			"Content-Disposition",
-			`attachment; filename="${encodeURIComponent(fileName)}"`,
-		);
+		// const fileName = shareMetadata.key.split("/").pop() || "download";
+		// headers.set(
+			// "Content-Disposition",
+			// `attachment; filename="${encodeURIComponent(fileName)}"`,
+		// );
 
 		return new Response(file.body, {
 			headers,
