@@ -29,8 +29,8 @@ jobs:
         run: npm install -g pnpm
       - name: Build from source
         run: |
-          npm install
-          npm run build-worker
+          pnpm install
+          pnpm run build-worker
           mkdir -p packages/github-action/node_modules/r2-explorer
           cp -r packages/worker/dist packages/github-action/node_modules/r2-explorer/dist
           cp -r packages/worker/dashboard packages/github-action/node_modules/r2-explorer/dashboard
