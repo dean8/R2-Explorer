@@ -30,7 +30,7 @@ jobs:
       - name: Build from source
         run: |
           pnpm install
-          pnpm run build-worker
+          pnpm run build
           mkdir -p packages/github-action/node_modules/r2-explorer
           cp -r packages/worker/dist packages/github-action/node_modules/r2-explorer/dist
           cp -r packages/worker/dashboard packages/github-action/node_modules/r2-explorer/dashboard
